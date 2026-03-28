@@ -9,40 +9,87 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 2em 1em;
+			}
+			h1 {
+				font-size: 2.5rem;
+				margin-bottom: 0.25em;
+			}
+			.tagline {
+				font-size: 1.2rem;
+				color: rgb(var(--gray));
+				margin-bottom: 2em;
+			}
+			.intro {
+				font-size: 1.05rem;
+				line-height: 1.7;
+				margin-bottom: 2em;
+			}
+			.intro p {
+				margin-bottom: 1em;
+			}
+			.topics {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em;
+				margin-bottom: 2.5em;
+			}
+			.topic {
+				background: rgb(var(--gray-light));
+				border-radius: 20px;
+				padding: 0.3em 0.9em;
+				font-size: 0.9rem;
+				color: rgb(var(--gray-dark));
+			}
+			.cta {
+				display: inline-block;
+				background: var(--accent);
+				color: white;
+				padding: 0.6em 1.4em;
+				border-radius: 6px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 1rem;
+				transition: opacity 0.2s ease;
+			}
+			.cta:hover {
+				opacity: 0.85;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<h1>Hi, I'm Mark.</h1>
+			<p class="tagline">I write about quant finance, Python, tennis, and anything else I feel like over-engineering.</p>
+
+			<div class="intro">
+				<p>
+					I work in finance and have a habit of going down rabbit holes — usually involving a Python notebook,
+					a pile of statistics, and a question that seemed simple until it wasn't. This blog is where those
+					rabbit holes get written up.
+				</p>
+				<p>
+					The aim is always to explain things from first principles: no hand-waving, no assumed knowledge,
+					just a patient walk through the reasoning with as many graphs as it takes. If you've ever wondered
+					<em>why</em> we use log returns, or <em>why</em> tennis is scored the way it is, you're in the right place.
+				</p>
+			</div>
+
+			<div class="topics">
+				<span class="topic">Quantitative Finance</span>
+				<span class="topic">Python</span>
+				<span class="topic">Statistics</span>
+				<span class="topic">Tennis Analytics</span>
+				<span class="topic">Data Science</span>
+				<span class="topic">Environmental Data</span>
+			</div>
+
+			<a href="/blog" class="cta">Read the blog</a>
 		</main>
 		<Footer />
 	</body>
