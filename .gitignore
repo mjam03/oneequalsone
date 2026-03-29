@@ -26,3 +26,9 @@ pnpm-debug.log*
 
 # Medium export data (contains personal info)
 medium-export/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
